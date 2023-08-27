@@ -27,5 +27,20 @@ namespace DurableFunctionsWorkflows
             // See https://learn.microsoft.com/azure/azure-functions/durable/durable-functions-http-api#start-orchestration
             return client.CreateCheckStatusResponse(req, instanceId);
         }
+
+        [Function("Function1_HttpRaiseEvent")]
+        public static async Task HttpRaiseEvent(
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequestData req,
+            [DurableClient] DurableTaskClient client,
+            FunctionContext executionContext)
+        {
+            var eventData = await req.ReadFromJsonAsync<TheEventIWasWaitingOn>();
+
+            await client.RaiseEventAsync(eventData.OrchestrationInstanceId,
+                SayingHelloOrchestration.TheEventIWasWaitingOn,
+                eventPayload: eventData.ABoolIWasExpecting);
+        }
     }
+
+    public record TheEventIWasWaitingOn(string OrchestrationInstanceId, bool ABoolIWasExpecting);
 }

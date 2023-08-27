@@ -11,6 +11,8 @@ namespace DurableFunctionsWorkflows.Workflows
 {
     public class SayingHelloOrchestration
     {
+        public static readonly string TheEventIWasWaitingOn = "TheEventIWasWaitingOn";
+
         private readonly SampleService _theInjectedService;
 
         public SayingHelloOrchestration(SampleService theInjectedService)
@@ -27,10 +29,18 @@ namespace DurableFunctionsWorkflows.Workflows
 
             // Replace name and input with values relevant for your Durable Functions Activity
             outputs.Add(await context.CallActivityAsync<string>(nameof(SayHelloTask), "Tokyo"));
-            outputs.Add(await context.CallActivityAsync<string>(nameof(SayHelloTask), "Seattle"));
-            outputs.Add(await context.CallActivityAsync<string>(nameof(SayHelloTask), "London"));
+            bool eventPayload = await context.WaitForExternalEvent<bool>(SayingHelloOrchestration.TheEventIWasWaitingOn);
 
-            // returns ["Hello Tokyo!", "Hello Seattle!", "Hello London!"]
+            if (eventPayload)
+            {
+                outputs.Add(await context.CallActivityAsync<string>(nameof(SayHelloTask), "Seattle"));
+            }
+            else
+            {
+                outputs.Add(await context.CallActivityAsync<string>(nameof(SayHelloTask), "London"));
+            }
+
+            // old returns ["Hello Tokyo!", "Hello Seattle!", "Hello London!"]
             return outputs;
         }
     }

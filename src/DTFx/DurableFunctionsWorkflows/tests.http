@@ -1,0 +1,20 @@
+@baseurl=http://localhost:7172
+
+### Start workflow
+// @name startworkflow
+POST {{baseurl}}/api/Function1_HttpStart
+
+### Get status
+@instanceId={{startworkflow.response.body.id}}
+@statusurl={{startworkflow.response.body.statusQueryGetUri}}
+GET {{statusurl}}
+
+### Raise event
+// @name raiseevent
+POST {{baseurl}}/api/Function1_HttpRaiseEvent
+Content-Type: application/json
+
+{
+    "OrchestrationInstanceId": "{{instanceId}}",
+    "ABoolIWasExpecting": true
+}
