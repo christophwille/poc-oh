@@ -8,10 +8,16 @@ AMD Ryzen 7 PRO 6850U with Radeon Graphics, 1 CPU, 16 logical and 8 physical cor
   DefaultJob : .NET 8.0.3 (8.0.324.11423), X64 RyuJIT AVX2
 
 
-| Method               | Mean       | Error    | StdDev   |
-|--------------------- |-----------:|---------:|---------:|
-| SharpTreeViewVariant | 1,708.8 ns | 18.96 ns | 17.73 ns |
-| LibVariant           |   496.6 ns |  9.66 ns |  9.03 ns |
+| Method               | Mean       | Error   | StdDev  |
+|--------------------- |-----------:|--------:|--------:|
+| SharpTreeViewVariant | 1,670.3 ns | 4.38 ns | 3.42 ns |
+| LibVariant           |   483.0 ns | 4.45 ns | 4.16 ns |
+| LexicoVariant        |   597.3 ns | 4.67 ns | 4.14 ns |
+
+// * Hints *
+Outliers
+  NaturalSortBenchmarks.SharpTreeViewVariant: Default -> 3 outliers were removed (1.69 us..1.70 us)
+  NaturalSortBenchmarks.LexicoVariant: Default        -> 1 outlier  was  removed (613.67 ns)
 
 // * Legends *
   Mean   : Arithmetic mean of all measurements
@@ -20,7 +26,7 @@ AMD Ryzen 7 PRO 6850U with Radeon Graphics, 1 CPU, 16 logical and 8 physical cor
   1 ns   : 1 Nanosecond (0.000000001 sec)
 
 // ***** BenchmarkRunner: End *****
-Run time: 00:00:36 (36.17 sec), executed benchmarks: 2
+Run time: 00:00:55 (55.33 sec), executed benchmarks: 3
 
-Global total time: 00:00:41 (41.31 sec), executed benchmarks: 2
+Global total time: 00:00:59 (59.67 sec), executed benchmarks: 3
 ```

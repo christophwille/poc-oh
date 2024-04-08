@@ -2,6 +2,7 @@
 using BenchmarkDotNet.Running;
 using ICSharpCode.ILSpy.TreeNodes;
 using NaturalSort.Extension;
+using System.Linq;
 
 namespace NaturalSortBenchmark
 {
@@ -14,6 +15,9 @@ namespace NaturalSortBenchmark
 
         [Benchmark]
         public string[] LibVariant() => folders.OrderBy(x => x, StringComparison.OrdinalIgnoreCase.WithNaturalSort()).ToArray();
+
+        [Benchmark]
+        public string[] LexicoVariant() => folders.OrderBy(x => x, new LexicographicStringComparer()).ToArray();
     }
 
     internal class Program
