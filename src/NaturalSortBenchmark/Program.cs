@@ -14,7 +14,7 @@ namespace NaturalSortBenchmark
         public string[] SharpTreeViewVariant() => folders.OrderBy(x => x, NaturalStringComparer.Instance).ToArray();
 
         [Benchmark]
-        public string[] LibVariant() => folders.OrderBy(x => x, StringComparison.OrdinalIgnoreCase.WithNaturalSort()).ToArray();
+        public string[] LibVariant() => folders.OrderBy(x => x, StringComparison.CurrentCultureIgnoreCase.WithNaturalSort()).ToArray();
 
         [Benchmark]
         public string[] LexicoVariant() => folders.OrderBy(x => x, new LexicographicStringComparer()).ToArray();
