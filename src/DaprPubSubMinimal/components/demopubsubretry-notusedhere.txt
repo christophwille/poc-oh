@@ -1,0 +1,19 @@
+# https://docs.dapr.io/developing-applications/building-blocks/pubsub/pubsub-deadletter/#retries-and-dead-letter-topics
+# https://docs.dapr.io/operations/resiliency/policies/#retries
+
+apiVersion: dapr.io/v1alpha1
+kind: Resiliency
+metadata:
+  name: mysamplepolicy
+spec:
+  policies:
+    retries:
+      pubsubRetry:
+        policy: constant
+        duration: 5s
+        maxRetries: 10
+  targets:
+    components:
+      demopubsub:
+        inbound:
+          retry: pubsubRetry
