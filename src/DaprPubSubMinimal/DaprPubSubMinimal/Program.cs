@@ -35,11 +35,11 @@ app.MapGet("/dapr/subscribe", () =>
 
 app.MapPost("sub", async ([FromBody] DemoPubSubMessage pubSubMessage, [FromServices] ILogger<Program> logger) =>
 {
-    logger.LogInformation("sub: entering " + DateTime.UtcNow.Ticks);
+    logger.LogInformation("sub: entering " + DateTime.UtcNow.ToString("hh:mm:ss.fff tt"));
 
     await Task.Delay(10000); // simulate work and make sure to avoid this is short
 
-    logger.LogInformation("sub: leaving " + DateTime.UtcNow.Ticks);
+    logger.LogInformation("sub: leaving " + DateTime.UtcNow.ToString("hh:mm:ss.fff tt"));
 
     // return Results.NotFound(); // for "delete message"
     // return Results.UnprocessableEntity() // for "retry message"
@@ -48,11 +48,11 @@ app.MapPost("sub", async ([FromBody] DemoPubSubMessage pubSubMessage, [FromServi
 
 app.MapPost("enqueue", async ([FromServices] DaprClient daprClient, [FromServices] ILogger<Program> logger, [FromBody] DemoEndpointRequest request) =>
 {
-    logger.LogInformation("enqueue: entering " + DateTime.UtcNow.Ticks);
+    logger.LogInformation("enqueue: entering " + DateTime.UtcNow.ToString("hh:mm:ss.fff tt"));
 
     await daprClient.PublishEventAsync("demopubsub", "demotopic", new DemoPubSubMessage(request.Message));
 
-    logger.LogInformation("enqueue: after PublishEventAsync " + DateTime.UtcNow.Ticks);
+    logger.LogInformation("enqueue: after PublishEventAsync " + DateTime.UtcNow.ToString("hh:mm:ss.fff tt"));
 
     return Results.Ok();
 });
