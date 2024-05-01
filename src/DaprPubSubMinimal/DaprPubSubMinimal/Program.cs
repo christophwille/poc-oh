@@ -11,6 +11,7 @@ builder.Services.AddDaprClient();
 var useManSidekick = builder.Configuration.GetSection("DaprSidekick").Exists();
 if (useManSidekick)
 {
+    Console.WriteLine("Using Sidekick");
     builder.Services.AddDaprSidekick(builder.Configuration);
 }
 
@@ -32,24 +33,27 @@ app.MapGet("/dapr/subscribe", () =>
                 }});
 });
 
-app.MapPost("sub", async (
-        [FromBody] DemoPubSubMessage pubSubMessage
-        ) =>
+app.MapPost("sub", async ([FromBody] DemoPubSubMessage pubSubMessage, [FromServices] ILogger<Program> logger) =>
 {
-    string breakpoint2 = pubSubMessage.Message;
+    logger.LogInformation("sub: entering " + DateTime.UtcNow.Ticks);
+
+    await Task.Delay(10000); // simulate work and make sure to avoid this is short
+
+    logger.LogInformation("sub: leaving " + DateTime.UtcNow.Ticks);
 
     // return Results.NotFound(); // for "delete message"
     // return Results.UnprocessableEntity() // for "retry message"
     return Results.Ok(); // for "message processed"
 });
 
-app.MapPost("enqueue", async ([FromServices] DaprClient daprClient, [FromBody] DemoEndpointRequest request) =>
+app.MapPost("enqueue", async ([FromServices] DaprClient daprClient, [FromServices] ILogger<Program> logger, [FromBody] DemoEndpointRequest request) =>
 {
-    string breakpoint1 = request.Message;
+    logger.LogInformation("enqueue: entering " + DateTime.UtcNow.Ticks);
 
     await daprClient.PublishEventAsync("demopubsub", "demotopic", new DemoPubSubMessage(request.Message));
 
-    string breakpoint3 = request.Message;
+    logger.LogInformation("enqueue: after PublishEventAsync " + DateTime.UtcNow.Ticks);
+
     return Results.Ok();
 });
 
