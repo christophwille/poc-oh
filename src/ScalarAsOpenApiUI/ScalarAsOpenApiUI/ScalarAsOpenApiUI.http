@@ -1,0 +1,6 @@
+@ScalarAsOpenApiUI_HostAddress = http://localhost:5293
+
+GET {{ScalarAsOpenApiUI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
