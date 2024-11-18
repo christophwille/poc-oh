@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "FunctionsWorkerV2": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7079",
+      "launchBrowser": false
+    }
+  }
+}
