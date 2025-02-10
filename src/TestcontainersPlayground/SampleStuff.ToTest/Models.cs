@@ -5,13 +5,23 @@ namespace SampleStuff.ToTest;
 // https://learn.microsoft.com/en-us/ef/core/get-started/overview/first-app?tabs=netcore-cli
 public class SqlServerBloggingContext : DbContext
 {
+    public SqlServerBloggingContext()
+    {
+    }
+    public SqlServerBloggingContext(DbContextOptions<SqlServerBloggingContext> options) : base(options)
+    {
+    }
+
     public string ConnectionString { get; set; } = "Server=(localdb)\\mssqllocaldb;Database=BloggingDemo;Trusted_Connection=True;MultipleActiveResultSets=true";
 
     public DbSet<Blog> Blogs { get; set; }
     public DbSet<Post> Posts { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
-        => options.UseSqlServer(ConnectionString);
+    {
+        if (!options.IsConfigured) options.UseSqlServer(ConnectionString);
+        base.OnConfiguring(options);
+    }
 }
 
 public class Blog
