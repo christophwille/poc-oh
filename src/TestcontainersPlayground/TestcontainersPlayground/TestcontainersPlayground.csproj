@@ -31,14 +31,15 @@
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.1" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.1" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.1" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
     <PackageReference Include="Microsoft.SqlServer.DacFx" Version="162.5.57" />
     <PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" Version="172.61.0" />
     <PackageReference Include="Microsoft.SqlServer.XEvent.XELite" Version="2024.2.5.1" />
     <PackageReference Include="Shouldly" Version="4.3.0" />
-    <PackageReference Include="Testcontainers" Version="4.1.0" />
-    <PackageReference Include="Testcontainers.Azurite" Version="4.1.0" />
-    <PackageReference Include="Testcontainers.MsSql" Version="4.1.0" />
+    <PackageReference Include="Testcontainers" Version="4.2.0" />
+    <PackageReference Include="Testcontainers.Azurite" Version="4.2.0" />
+    <PackageReference Include="Testcontainers.MsSql" Version="4.2.0" />
+    <PackageReference Include="Testcontainers.XunitV3" Version="4.2.0" />
     <PackageReference Include="xunit.v3" Version="1.1.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="3.0.2" />
   </ItemGroup>

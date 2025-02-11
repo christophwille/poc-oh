@@ -13,6 +13,5 @@ https://dotnet.testcontainers.org/modules/mssql/
 
 TODO
 
-* Using the new https://www.nuget.org/packages/Testcontainers.XunitV3/#versions-body-tab (when available)
-* Use XELite to trace batch_completed
+* Using the new https://www.nuget.org/packages/Testcontainers.XunitV3/#versions-body-tab (available now)
 * Test Azure Functions using Testcontainers
