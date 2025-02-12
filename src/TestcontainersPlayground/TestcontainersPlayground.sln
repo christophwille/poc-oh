@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_", "_", "{6C32994A-D4B9-40
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzFunc.ToTest", "AzFunc.ToTest\AzFunc.ToTest.csproj", "{68A55CCE-3ECA-C9FF-064D-97E1FA0A1D28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestcontainersPlayground.AzFunc", "TestcontainersPlayground.AzFunc\TestcontainersPlayground.AzFunc.csproj", "{A7CA8368-95A5-FE6A-3B26-965E67C4C251}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,8 +30,19 @@ Global
 		{6D013BF7-31AB-44FC-8977-62417AB179B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D013BF7-31AB-44FC-8977-62417AB179B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D013BF7-31AB-44FC-8977-62417AB179B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68A55CCE-3ECA-C9FF-064D-97E1FA0A1D28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68A55CCE-3ECA-C9FF-064D-97E1FA0A1D28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68A55CCE-3ECA-C9FF-064D-97E1FA0A1D28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68A55CCE-3ECA-C9FF-064D-97E1FA0A1D28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7CA8368-95A5-FE6A-3B26-965E67C4C251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7CA8368-95A5-FE6A-3B26-965E67C4C251}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7CA8368-95A5-FE6A-3B26-965E67C4C251}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7CA8368-95A5-FE6A-3B26-965E67C4C251}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7191C3C9-A291-4F43-8884-66BDB0665B51}
 	EndGlobalSection
 EndGlobal
