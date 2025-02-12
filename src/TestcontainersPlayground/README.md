@@ -15,3 +15,9 @@ TODO
 
 * Using the new https://www.nuget.org/packages/Testcontainers.XunitV3/#versions-body-tab (available now)
 * Test Azure Functions using Testcontainers
+
+
+## Notes
+
+XELite isn't exactly great, maybe going full SMO is a more reliable option
+https://github.com/microsoft/sqltoolsservice/blob/main/src/Microsoft.SqlTools.ServiceLayer/Profiler/ProfilerService.cs
