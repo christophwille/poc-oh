@@ -40,8 +40,14 @@ That has several issues
 * Is using IHostBuilder and not Isolated Functions v2 (FunctionsApplicationBuilder, see also same problem with UnitTestEx)
 
 
+## How the Durable Team is Doing Integration Testing
+
+* https://github.com/Azure/azure-functions-durable-extension/tree/dev/test/e2e
+* https://github.com/Azure/azure-functions-durable-extension/blob/dev/.github/workflows/E2ETest.yml
+
+
 ## Aspire and others
 
 https://learn.microsoft.com/en-us/dotnet/aspire/serverless/functions?tabs=dotnet-cli&pivots=visual-studio
 
-https://github.com/Avanade/unittestex?tab=readme-ov-file#HTTP-triggered-Azure-Function (WebJobs code atm)
+https://github.com/Avanade/unittestex?tab=readme-ov-file#HTTP-triggered-Azure-Function (Issue opened for Isolated V2 support)
