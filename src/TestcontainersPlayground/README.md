@@ -14,6 +14,8 @@ https://dotnet.testcontainers.org/modules/mssql/
 TODO
 
 * Using the new https://www.nuget.org/packages/Testcontainers.XunitV3/#versions-body-tab (available now)
+* https://github.com/jbogard/Respawn on top of db Testcontainer
+* Custom db Testcontainer with restored db for faster startup than migration
 * Test Azure Functions using Testcontainers
 
 
