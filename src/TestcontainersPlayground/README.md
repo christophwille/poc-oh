@@ -15,7 +15,7 @@ TODO
 
 * Using the new https://www.nuget.org/packages/Testcontainers.XunitV3/#versions-body-tab (available now)
 * https://github.com/jbogard/Respawn on top of db Testcontainer
-* Custom db Testcontainer with restored db for faster startup than migration
+* Custom db Testcontainer with restored db for faster startup than migration, or standard container with vol attach https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-docker-container-configure
 * Test Azure Functions using Testcontainers
 
 
