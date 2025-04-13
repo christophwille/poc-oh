@@ -1,0 +1,3 @@
+﻿CREATE TYPE [dbo].[tid]
+    FROM VARCHAR (6) NOT NULL;
+

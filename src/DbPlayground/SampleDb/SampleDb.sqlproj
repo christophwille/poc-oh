@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build">
+  <Sdk Name="Microsoft.Build.Sql" Version="1.0.0" />
+  <PropertyGroup>
+    <Name>SampleDb</Name>
+    <ProjectGuid>{b86f5be3-3b0c-427a-89c3-08b44fd4a291}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <ModelCollation>1033,CI</ModelCollation>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\User Defined Types\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\authors.sql" />
+    <Build Include="dbo\Tables\publishers.sql" />
+    <Build Include="dbo\Tables\titles.sql" />
+    <Build Include="dbo\Tables\titleauthor.sql" />
+    <Build Include="dbo\Tables\stores.sql" />
+    <Build Include="dbo\Tables\sales.sql" />
+    <Build Include="dbo\Tables\roysched.sql" />
+    <Build Include="dbo\Tables\discounts.sql" />
+    <Build Include="dbo\Tables\jobs.sql" />
+    <Build Include="dbo\Tables\pub_info.sql" />
+    <Build Include="dbo\Tables\employee.sql" />
+    <Build Include="dbo\Views\titleview.sql" />
+    <Build Include="dbo\Stored Procedures\byroyalty.sql" />
+    <Build Include="dbo\Stored Procedures\reptq1.sql" />
+    <Build Include="dbo\Stored Procedures\reptq2.sql" />
+    <Build Include="dbo\Stored Procedures\reptq3.sql" />
+    <Build Include="dbo\User Defined Types\id.sql" />
+    <Build Include="dbo\User Defined Types\tid.sql" />
+    <Build Include="dbo\User Defined Types\empid.sql" />
+  </ItemGroup>
+  <Target Name="BeforeBuild">
+    <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
+  </Target>
+</Project>
