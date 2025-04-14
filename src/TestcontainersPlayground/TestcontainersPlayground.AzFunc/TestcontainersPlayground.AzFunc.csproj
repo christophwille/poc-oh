@@ -27,17 +27,17 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Meziantou.Extensions.Logging.Xunit.v3" Version="1.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.1" />
+		<PackageReference Include="Meziantou.Extensions.Logging.Xunit.v3" Version="1.1.3" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.4" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.4" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.4" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
 		<PackageReference Include="Shouldly" Version="4.3.0" />
-		<PackageReference Include="Testcontainers" Version="4.2.0" />
-		<PackageReference Include="Testcontainers.Azurite" Version="4.2.0" />
-		<PackageReference Include="Testcontainers.MsSql" Version="4.2.0" />
-		<PackageReference Include="Testcontainers.XunitV3" Version="4.2.0" />
-		<PackageReference Include="xunit.v3" Version="1.1.0" />
+		<PackageReference Include="Testcontainers" Version="4.3.0" />
+		<PackageReference Include="Testcontainers.Azurite" Version="4.3.0" />
+		<PackageReference Include="Testcontainers.MsSql" Version="4.3.0" />
+		<PackageReference Include="Testcontainers.XunitV3" Version="4.3.0" />
+		<PackageReference Include="xunit.v3" Version="2.0.1" />
 		<PackageReference Include="xunit.runner.visualstudio" Version="3.0.2" />
 	</ItemGroup>
 
