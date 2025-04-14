@@ -1,0 +1,33 @@
+FROM mcr.microsoft.com/mssql/server:2022-latest
+
+# TODO: apt-get needs root; switch back to mssql USER later?
+USER root
+
+# Install Unzip
+RUN apt-get update \
+    && apt-get install unzip -y \
+    && apt-get install libunwind8 -y
+
+# https://learn.microsoft.com/en-us/sql/tools/sqlpackage/sqlpackage-download?view=sql-server-ver16#linux
+# Install SQLPackage for Linux and make it executable
+RUN wget -progress=bar:force -q -O sqlpackage.zip https://go.microsoft.com/fwlink/?linkid=2249739 \
+    && unzip -qq sqlpackage.zip -d /opt/sqlpackage \
+    && chmod +x /opt/sqlpackage/sqlpackage
+
+# Add the BACPAC to the image
+COPY SampleDb.bacpac /tmp/db.bacpac
+
+# Configure external build arguments to allow configurability.
+ARG DBNAME=Database
+ARG PASSWORD
+
+# Configure the required environmental variables
+ENV ACCEPT_EULA=Y
+ENV SA_PASSWORD=$PASSWORD
+
+# Launch SQL Server, confirm startup is complete, deploy the DACPAC, then terminate SQL Server.
+# See https://stackoverflow.com/a/51589787/488695
+RUN ( /opt/mssql/bin/sqlservr & ) | grep -q "Service Broker manager has started" \
+    && /opt/sqlpackage/sqlpackage /a:Import /tsn:. /ttsc:True /tdn:${DBNAME} /tu:sa /tp:$SA_PASSWORD /sf:/tmp/db.bacpac \
+    && rm /tmp/db.bacpac \
+    && pkill sqlservr
