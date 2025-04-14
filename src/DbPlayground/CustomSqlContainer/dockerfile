@@ -23,11 +23,12 @@ ARG PASSWORD
 
 # Configure the required environmental variables
 ENV ACCEPT_EULA=Y
-ENV SA_PASSWORD=$PASSWORD
+ENV MSSQL_SA_PASSWORD=$PASSWORD
+ENV SQLCMDPASSWORD=$PASSWORD
 
 # Launch SQL Server, confirm startup is complete, deploy the DACPAC, then terminate SQL Server.
 # See https://stackoverflow.com/a/51589787/488695
 RUN ( /opt/mssql/bin/sqlservr & ) | grep -q "Service Broker manager has started" \
-    && /opt/sqlpackage/sqlpackage /a:Import /tsn:. /ttsc:True /tdn:${DBNAME} /tu:sa /tp:$SA_PASSWORD /sf:/tmp/db.bacpac \
+    && /opt/sqlpackage/sqlpackage /a:Import /tsn:. /ttsc:True /tdn:${DBNAME} /tu:sa /tp:$MSSQL_SA_PASSWORD /sf:/tmp/db.bacpac \
     && rm /tmp/db.bacpac \
     && pkill sqlservr
