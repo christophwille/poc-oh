@@ -16,7 +16,9 @@ namespace TestcontainersPlayground
             this.targetDbName = targetDbName;
             this.logger = testOutputHelper?.CreateILogger();
 
-            var builder = new MsSqlBuilder().WithImage("mcr.microsoft.com/mssql/server:2022-CU15-GDR1-ubuntu-22.04");
+            // https://mcr.microsoft.com/en-us/artifact/mar/mssql/server/tags
+            // "latest is not a version"
+            var builder = new MsSqlBuilder().WithImage("mcr.microsoft.com/mssql/server:2022-CU18-ubuntu-22.04");
 
             if (logger != null)
                 builder = builder.WithLogger(logger);
