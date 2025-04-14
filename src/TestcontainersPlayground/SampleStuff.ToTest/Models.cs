@@ -24,6 +24,17 @@ public class SqlServerBloggingContext : DbContext
     }
 }
 
+// https://www.npgsql.org/efcore/
+public class NpgsqlBloggingContext : DbContext
+{
+    public DbSet<Blog> Blogs { get; set; }
+    public DbSet<Post> Posts { get; set; }
+
+    public string ConnectionString { get; set; } = "<connection string>";
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        => optionsBuilder.UseNpgsql(ConnectionString);
+}
+
 public class Blog
 {
     public int BlogId { get; set; }

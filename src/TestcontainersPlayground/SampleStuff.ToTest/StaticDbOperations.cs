@@ -1,4 +1,6 @@
-﻿namespace SampleStuff.ToTest
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace SampleStuff.ToTest
 {
     public static class StaticDbOperations
     {
@@ -29,9 +31,9 @@
             sqlDb.Add(new Blog { Url = "http://blogs.msdn.com/adonet" });
             int affected = await sqlDb.SaveChangesAsync();
 
-            var blog = sqlDb.Blogs
+            var blog = await sqlDb.Blogs
                 .OrderBy(b => b.BlogId)
-                .First();
+                .FirstAsync();
 
             blog.Url = "https://devblogs.microsoft.com/dotnet";
             blog.Posts.Add(new Post { Title = "Hello World", Content = "I wrote an app using EF Core!" });
