@@ -17,6 +17,7 @@ var reportDeserialized = report.DeserializeReport();
 
 Console.WriteLine($"Alerts: {reportDeserialized.Alerts.Count} Warnings: {reportDeserialized.Warnings.Count} Errors: {reportDeserialized.Errors.Count}");
 
+// Aspire: https://erikej.github.io/sql/dacfx/aspire/2025/05/18/sql-aspire-dacfx.html
 var result = deployer.DeployDacPac(connStr, targetDb, ms);
 
 Console.WriteLine(result.Succeeded ? "Deployment succeeded" : "Deployment failed");
