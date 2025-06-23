@@ -1,4 +1,5 @@
 ﻿using NaturalSort.Extension;
+using System.Globalization;
 using System.Runtime.InteropServices;
 
 namespace ConsoleApp1
@@ -13,10 +14,14 @@ namespace ConsoleApp1
 
             var arrWinApiSorted = arrOriginal.OrderBy(x => x, NaturalStringComparer.Instance).ToArray();
 
+            // https://github.com/dotnet/core/blob/main/release-notes/10.0/preview/preview1/libraries.md#numeric-ordering-for-string-comparison
+            StringComparer numericStringComparer = StringComparer.Create(CultureInfo.CurrentCulture, CompareOptions.NumericOrdering);
+            var arrNet10NumbericSorted = arrOriginal.Order(numericStringComparer).ToArray();
 
             arrOriginal.Dump();
             arrNatSortExt.Dump();
             arrWinApiSorted.Dump();
+            arrNet10NumbericSorted.Dump();
         }
 
         static void Dump(this string[] arr)
