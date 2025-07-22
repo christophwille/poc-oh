@@ -16,7 +16,7 @@ namespace TestcontainersPlayground
         {
             // https://hub.docker.com/_/postgres
             return builder
-                .WithImage("postgres:17.4");
+                .WithImage("postgres:17.5");
         }
 
         public override DbProviderFactory DbProviderFactory => NpgsqlFactory.Instance;
