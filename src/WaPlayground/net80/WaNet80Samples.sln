@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11116.177
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreetHost", "GreetHost\GreetHost.csproj", "{A9FB845F-EA00-D4BB-D1A2-6B2BF5708000}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JintGreet", "JintGreet\JintGreet.csproj", "{56B20FD8-DA2D-46E5-8071-42DD2CED6BB2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9FB845F-EA00-D4BB-D1A2-6B2BF5708000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9FB845F-EA00-D4BB-D1A2-6B2BF5708000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9FB845F-EA00-D4BB-D1A2-6B2BF5708000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9FB845F-EA00-D4BB-D1A2-6B2BF5708000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56B20FD8-DA2D-46E5-8071-42DD2CED6BB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56B20FD8-DA2D-46E5-8071-42DD2CED6BB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56B20FD8-DA2D-46E5-8071-42DD2CED6BB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56B20FD8-DA2D-46E5-8071-42DD2CED6BB2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

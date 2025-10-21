@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11116.177
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWasi", "HelloWasi\HelloWasi.csproj", "{270D5D36-2BBB-E57D-425F-07F57E777D57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloComponentize", "HelloComponentize\HelloComponentize.csproj", "{5194EFD5-A960-F278-3F36-2EE7FFF924D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{270D5D36-2BBB-E57D-425F-07F57E777D57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{270D5D36-2BBB-E57D-425F-07F57E777D57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{270D5D36-2BBB-E57D-425F-07F57E777D57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{270D5D36-2BBB-E57D-425F-07F57E777D57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5194EFD5-A960-F278-3F36-2EE7FFF924D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5194EFD5-A960-F278-3F36-2EE7FFF924D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5194EFD5-A960-F278-3F36-2EE7FFF924D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5194EFD5-A960-F278-3F36-2EE7FFF924D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
