@@ -15,8 +15,7 @@
 
 	<ItemGroup>
 		<!-- https://github.com/bytecodealliance/componentize-dotnet/issues/76 -->
-		<PackageReference Update="Microsoft.DotNet.ILCompiler.LLVM" Version="10.0.0-alpha.1.25118.1" />
-
+		<!-- <PackageReference Update="Microsoft.DotNet.ILCompiler.LLVM" Version="10.0.0-alpha.1.25118.1" /> -->
 		<PackageReference Include="BytecodeAlliance.Componentize.DotNet.Wasm.SDK" Version="0.7.0-preview*" />
 		<PackageReference Include="runtime.win-x64.microsoft.dotnet.ilcompiler.llvm" Version="10.0.0-alpha.1.25162.1" />
 	</ItemGroup>
