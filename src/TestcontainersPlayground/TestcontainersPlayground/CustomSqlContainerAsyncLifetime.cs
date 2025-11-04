@@ -18,7 +18,7 @@ namespace TestcontainersPlayground
 
             // https://mcr.microsoft.com/en-us/artifact/mar/mssql/server/tags
             // "latest is not a version"
-            var builder = new MsSqlBuilder().WithImage("mcr.microsoft.com/mssql/server:2022-CU20-ubuntu-22.04");
+            var builder = new MsSqlBuilder().WithImage("mcr.microsoft.com/mssql/server:2022-CU21-ubuntu-22.04");
 
             if (logger != null)
                 builder = builder.WithLogger(logger);
