@@ -6,7 +6,7 @@ https://www.kenmuse.com/blog/devops-sql-server-dacpac-docker
 
 ## Create yourself a bacpac
 
-`dotnet tool install --global Microsoft.SqlPackage --version 170.0.86-preview`
+`dotnet tool install --global Microsoft.SqlPackage --version 170.2.70`
 
 Eg 
 
