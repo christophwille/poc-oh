@@ -1,4 +1,4 @@
-## .NET WASI app
+﻿## .NET WASI app
 
 Definitely read https://henrikrxn.github.io/blog/Wasi-dotnet-10/ and see the GH issue links for state of WASI.
 
@@ -7,49 +7,17 @@ Created with (after installing `wasi-experimental` workload):
 
 `dotnet new wasiconsole -o HelloWasi`
 
-Publish won't work with WASI SDK 27 (latest), had to go back to WASI SDK 25:
 
-`dotnet publish -c Release` 
-
-Fun part - without running dotnet publish the `bin/$(Configuration)/net10.0/wasi-wasm/AppBundle` directory looks like this:
+Building and running:
 
 ```
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d----          10/21/2025  9:12 AM                tmp
--a---          10/21/2025  9:12 AM           2492 HelloWasi.runtimeconfig.json
--a---          10/21/2025  9:12 AM       27034753 HelloWasi.wasm
--a---          10/21/2025  9:12 AM            463 node.mjs
--a---          10/21/2025  9:12 AM             79 run-node.sh
--a---          10/21/2025  9:12 AM             32 run-wasmtime.sh
+dotnet build -c Debug
+cd bin\Debug\net10.0\wasi-wasm\AppBundle
+wasmtime run --wasi http --dir . dotnet.wasm HelloWasi
 ```
 
-with publish:
 
-```
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d----          10/21/2025  9:12 AM                tmp
--a---          10/21/2025  9:13 AM           2492 HelloWasi.runtimeconfig.json
--a---          10/21/2025  9:13 AM        5943555 HelloWasi.wasm
--a---          10/21/2025  9:13 AM            463 node.mjs
--a---          10/21/2025  9:13 AM             79 run-node.sh
--a---          10/21/2025  9:13 AM             32 run-wasmtime.sh
-```
-
-Running after build only:
-
-```
-wasmtime --dir . -- HelloWasi.wasm
-Error: failed to run main module `HelloWasi.wasm`
-
-Caused by:
-    0: component imports instance `wasi:http/types@0.2.0`, but a matching implementation was not found in the linker
-    1: instance export `fields` has the wrong type
-    2: resource implementation is missing
-```
-
-Running after publish:
+Output:
 
 ```
 Hello, Wasi Console!
@@ -58,6 +26,8 @@ OS Architecture      : Wasm
 Framework Description: .NET 10.0.0-rc.2.25502.107
 Runtime Identifier   : wasi-wasm
 ```
+
+---
 
 Default README content created by .NET template follows:
 
