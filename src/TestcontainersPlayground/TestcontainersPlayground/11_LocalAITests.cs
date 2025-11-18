@@ -6,7 +6,7 @@ namespace TestcontainersPlayground;
 public class LocalAITests
 {
     // https://hub.docker.com/r/ollama/ollama/tags you don't want to pull those every time from Docker Hub
-    public const string OllamaImage = "ollama/ollama:0.11.7";
+    public const string OllamaImage = "ollama/ollama:0.12.11";
 
     // https://ollama.com/library/gemma3
     public const string ModelToUse = "gemma3:270m";

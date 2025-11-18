@@ -46,7 +46,6 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\AzFunc.ToTest\AzFunc.ToTest.csproj" />
-		<ProjectReference Include="..\SampleStuff.ToTest\SampleStuff.ToTest.csproj" />
 	</ItemGroup>
 
 </Project>
