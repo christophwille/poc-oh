@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/_/">
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="AzFunc.ToTest/AzFunc.ToTest.csproj" />
+  <Project Path="SampleStuff.ToTest/SampleStuff.ToTest.csproj" />
+  <Project Path="TestcontainersPlayground.AzFunc/TestcontainersPlayground.AzFunc.csproj" />
+  <Project Path="TestcontainersPlayground/TestcontainersPlayground.csproj" />
+</Solution>
