@@ -30,7 +30,7 @@ public class GoingWithFixturesTests : CustomTestcontainersFixture<GoingWithFixtu
     {
     }
 
-    // This is test will have side effects on the db
+    // This test will have side effects on the db
     [Fact]
     public async Task Create_Db_InTest_AndQuery()
     {
