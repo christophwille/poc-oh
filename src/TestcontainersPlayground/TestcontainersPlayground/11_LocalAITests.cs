@@ -30,6 +30,7 @@ public class LocalAITests
             "ollama", "pull", ModelToUse
         });
 
+        // This is NOT a proper eval, see https://newsletter.pragmaticengineer.com/p/evals
         string response = await TestModel(container.GetBaseAddress(), ModelToUse);
 
         var logs = await container.GetLogsAsync();
