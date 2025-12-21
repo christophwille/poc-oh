@@ -1,11 +1,26 @@
 using Amazon.Runtime;
 using Amazon.S3;
 using Amazon.S3.Model;
+using Genbox.SimpleS3.AmazonS3.Extensions;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.Configure<AwsS3Setting>(builder.Configuration.GetSection(AwsS3Setting.Section));
+
+//// https://github.com/Genbox/SimpleS3/
+//builder.Services.AddAmazonS3(config =>
+//{
+//    var settings = new AwsS3Setting();
+//    builder.Configuration.GetSection(AwsS3Setting.Section).Bind(settings);
+//    config.Credentials = new Genbox.SimpleS3.Core.Common.Authentication.StringAccessKey(settings.AccessKey, settings.SecretKey);
+//    config.Endpoint = settings.ServiceUrl;
+
+//    // Microsoft.Extensions.Options.OptionsValidationException: You must provide a region; You can only use NamingMode.VirtualHost
+//    // when you specify an endpoint template.; Invalid key id: The input was not the correct length. Length should be '20';
+//    // Invalid secret key: The input was not the correct length. Length should be '40'
+//});
 
 builder.AddServiceDefaults();
 builder.Services.AddProblemDetails();
@@ -34,7 +49,7 @@ app.MapGet("/s3test", async (IOptionsSnapshot<AwsS3Setting> snapShot) =>
 
     var rustfs = builder.Configuration.GetConnectionString("rustfs");
 
-    var config = new AmazonS3Config
+    var config = new Amazon.S3.AmazonS3Config
     {
         ServiceURL = settings.ServiceUrl,
         ForcePathStyle = true,
@@ -47,9 +62,17 @@ app.MapGet("/s3test", async (IOptionsSnapshot<AwsS3Setting> snapShot) =>
 
     var response = await _s3client.ListObjectsV2Async(request);
 
-    return response.S3Objects.Select(o => o.Key).ToList();
+    // If there are no objects in the bucket, S3Objects will be null
+    return response?.S3Objects.Select(o => o.Key).ToList();
 })
 .WithName("GetFileList");
+
+//app.MapGet("/simples3test", async ([FromServices] Genbox.SimpleS3.AmazonS3.AmazonS3Client client) =>
+//{
+//    var response = await client.ListObjectsAsync("my-bucket");
+//    return response.Objects.Select(o => o.ObjectKey).ToList();
+//})
+//.WithName("GetFileListSimpleS3");
 
 string[] summaries = ["Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"];
 
