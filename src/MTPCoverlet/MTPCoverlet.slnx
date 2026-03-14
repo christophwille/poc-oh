@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="MTPCoverlet.Tests/MTPCoverlet.Tests.csproj" />
+  <Project Path="MTPCoverlet/MTPCoverlet.csproj" />
+</Solution>
