@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/docs/">
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="TxOutboxWithContracts.Data/TxOutboxWithContracts.Data.csproj" Id="4d33e181-e780-4d90-8395-bbc8f5bda4fd" />
+  <Project Path="TxOutboxWithContracts.FakeBus/TxOutboxWithContracts.FakeBus.csproj" Id="c365ea8a-71c5-496b-9e08-eb75bb2af300" />
+  <Project Path="TxOutboxWithContracts.Messages/TxOutboxWithContracts.Messages.csproj" Id="9da7bb7c-307f-4fda-82dc-40b08329aa28" />
+  <Project Path="TxOutboxWithContracts.SampleProducer/TxOutboxWithContracts.SampleProducer.csproj" Id="31513145-6007-4eaf-96ed-4f115b594b79" />
+  <Project Path="TxOutboxWithContracts.Worker/TxOutboxWithContracts.Worker.csproj" />
+</Solution>
