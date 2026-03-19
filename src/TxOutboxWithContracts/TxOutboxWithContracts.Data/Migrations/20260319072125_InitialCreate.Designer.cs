@@ -12,7 +12,7 @@ using TxOutboxWithContracts.Data;
 namespace TxOutboxWithContracts.Data.Migrations
 {
     [DbContext(typeof(SqlServerBloggingContext))]
-    [Migration("20260316132802_InitialCreate")]
+    [Migration("20260319072125_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
