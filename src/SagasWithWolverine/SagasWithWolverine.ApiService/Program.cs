@@ -1,17 +1,41 @@
-var builder = WebApplication.CreateBuilder(args);
+using SagasWithWolverine.ApiService;
+using Wolverine;
+using Wolverine.RabbitMQ;
+using Wolverine.SqlServer;
 
-// Add service defaults & Aspire client integrations.
+// https://wolverinefx.net/guide/durability/sagas.html
+//    https://wolverinefx.net/guide/durability/efcore/sagas
+//    https://wolverinefx.net/guide/configuration
+
+// https://www.milanjovanovic.tech/blog/implementing-the-saga-pattern-with-wolverine
+// https://www.architecture-weekly.com/p/passive-aggresive-event
+
+var builder = WebApplication.CreateBuilder(args);
 builder.AddServiceDefaults();
 
-// Add services to the container.
+var connectionString = builder.Configuration.GetConnectionString("sagastate");
+
+var configDebug = string.Join(Environment.NewLine,
+    builder.Configuration.AsEnumerable()
+        .OrderBy(kvp => kvp.Key)
+        .Select(kvp => $"{kvp.Key} = {kvp.Value}"));
+
+builder.Host.UseWolverine(options =>
+{
+    options.UseRabbitMqUsingNamedConnection("rabbitmq")
+        .AutoProvision()
+        .UseConventionalRouting();
+
+    options.Policies.DisableConventionalLocalRouting();
+
+    options.PersistMessagesWithSqlServer(connectionString!);
+});
+
+
 builder.Services.AddProblemDetails();
-
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 app.UseExceptionHandler();
 
 if (app.Environment.IsDevelopment())
@@ -22,6 +46,24 @@ if (app.Environment.IsDevelopment())
 string[] summaries = ["Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"];
 
 app.MapGet("/", () => "API service is running. Navigate to /weatherforecast to see sample data.");
+
+if (app.Environment.IsDevelopment())
+{
+    app.MapGet("/config", () => configDebug);
+}
+
+app.MapPost("/orders/start", async (IMessageBus bus) =>
+{
+    var orderId = Guid.NewGuid().ToString("N");
+    await bus.PublishAsync(new StartOrder(orderId));
+    return Results.Accepted($"/orders/{orderId}", new { orderId });
+});
+
+app.MapPost("/orders/{id}/complete", async (string id, IMessageBus bus) =>
+{
+    await bus.PublishAsync(new CompleteOrder(id));
+    return Results.Accepted();
+});
 
 app.MapGet("/weatherforecast", () =>
 {

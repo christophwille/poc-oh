@@ -12,6 +12,9 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.7" />
+    <PackageReference Include="WolverineFx" Version="5.37.0" />
+    <PackageReference Include="WolverineFx.RabbitMQ" Version="5.37.0" />
+    <PackageReference Include="WolverineFx.SqlServer" Version="5.37.0" />
   </ItemGroup>
 
 </Project>

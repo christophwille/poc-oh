@@ -1,4 +1,4 @@
-<Project Sdk="Aspire.AppHost.Sdk/13.2.3">
+<Project Sdk="Aspire.AppHost.Sdk/13.2.4">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -11,6 +11,11 @@
   <ItemGroup>
     <ProjectReference Include="..\SagasWithWolverine.ApiService\SagasWithWolverine.ApiService.csproj" />
     <ProjectReference Include="..\SagasWithWolverine.Web\SagasWithWolverine.Web.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.RabbitMQ" Version="13.2.4" />
+    <PackageReference Include="Aspire.Hosting.SqlServer" Version="13.2.4" />
   </ItemGroup>
 
 </Project>
