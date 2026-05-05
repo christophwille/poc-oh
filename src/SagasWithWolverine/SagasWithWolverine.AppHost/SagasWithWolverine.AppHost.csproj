@@ -1,0 +1,16 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.2.3">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>4715f886-b0a2-4b29-a05b-bb9a57dade71</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SagasWithWolverine.ApiService\SagasWithWolverine.ApiService.csproj" />
+    <ProjectReference Include="..\SagasWithWolverine.Web\SagasWithWolverine.Web.csproj" />
+  </ItemGroup>
+
+</Project>

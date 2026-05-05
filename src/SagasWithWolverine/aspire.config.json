@@ -1,0 +1,5 @@
+{
+  "appHost": {
+    "path": "SagasWithWolverine.AppHost/SagasWithWolverine.AppHost.csproj"
+  }
+}
