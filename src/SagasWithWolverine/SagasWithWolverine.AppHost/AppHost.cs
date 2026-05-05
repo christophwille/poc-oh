@@ -2,7 +2,12 @@ var builder = DistributedApplication.CreateBuilder(args);
 
 var sqlServer = builder.AddSqlServer("sqlserver").AddDatabase("sagastate");
 
-var rabbitMq = builder.AddRabbitMQ("rabbitmq");
+// var rabbitUser = builder.AddParameter("RabbitUser"); // would be config value "Parameters:RabbitUser"
+
+var rabbitMq = builder.AddRabbitMQ("rabbitmq",
+        userName: builder.AddParameter("username", "admin", secret: true),
+        password: builder.AddParameter("password", "admin", secret: true))
+    .WithManagementPlugin();
 
 var apiService = builder.AddProject<Projects.SagasWithWolverine_ApiService>("apiservice")
     .WithReference(sqlServer)
