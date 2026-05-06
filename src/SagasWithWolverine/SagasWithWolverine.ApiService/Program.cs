@@ -1,4 +1,5 @@
 using SagasWithWolverine.ApiService;
+using Scalar.AspNetCore;
 using Wolverine;
 using Wolverine.RabbitMQ;
 using Wolverine.SqlServer;
@@ -41,11 +42,13 @@ app.UseExceptionHandler();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    // https://scalar.com/products/api-references/integrations/aspnetcore/integration
+    app.MapScalarApiReference("/docs");
 }
 
 string[] summaries = ["Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"];
 
-app.MapGet("/", () => "API service is running. Navigate to /weatherforecast to see sample data.");
+app.MapGet("/", () => "API service is running. Navigate to /docs to see the OpenAPI explorer.");
 
 if (app.Environment.IsDevelopment())
 {
