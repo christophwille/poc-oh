@@ -5,9 +5,11 @@ using Wolverine.RabbitMQ;
 using Wolverine.SqlServer;
 
 // https://wolverinefx.net/guide/durability/sagas.html
-//    https://wolverinefx.net/guide/durability/efcore/sagas
 //    https://wolverinefx.net/guide/configuration
-
+//    https://wolverinefx.net/guide/durability/efcore/sagas#when-to-use-ef-core-vs-lightweight-storage
+//      https://wolverinefx.net/guide/durability/efcore/#getting-started
+//    https://wolverinefx.net/guide/handlers/cascading
+//
 // https://www.milanjovanovic.tech/blog/implementing-the-saga-pattern-with-wolverine
 // https://www.architecture-weekly.com/p/passive-aggresive-event
 
