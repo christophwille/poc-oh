@@ -1,0 +1,108 @@
+@page "/orders"
+@rendermode InteractiveServer
+
+@inject OrderApiClient OrderApi
+
+<PageTitle>Orders</PageTitle>
+
+<h1>Orders</h1>
+
+<section class="mb-5">
+    <h2>Start Order</h2>
+    <p>Click the button to start a new order saga.</p>
+    <button class="btn btn-primary" @onclick="StartOrder" disabled="@startBusy">Start Order</button>
+
+    @if (startBusy)
+    {
+        <p class="mt-2"><em>Starting...</em></p>
+    }
+    else if (startedOrderId is not null)
+    {
+        <div class="alert alert-success mt-3">
+            Order started! Order ID: <strong>@startedOrderId</strong>
+        </div>
+    }
+    else if (startError is not null)
+    {
+        <div class="alert alert-danger mt-3">@startError</div>
+    }
+</section>
+
+<hr />
+
+<section class="mb-5">
+    <h2>Complete Order</h2>
+    <p>Enter the Order ID to mark it as complete.</p>
+    <div class="input-group mb-3" style="max-width: 500px;">
+        <input class="form-control" placeholder="Order ID (GUID)" @bind="completeOrderId" @bind:event="oninput" />
+        <button class="btn btn-success" @onclick="CompleteOrder"
+                disabled="@(completeBusy || string.IsNullOrWhiteSpace(completeOrderId))">
+            Complete Order
+        </button>
+    </div>
+
+    @if (completeBusy)
+    {
+        <p><em>Completing...</em></p>
+    }
+    else if (completeSuccess)
+    {
+        <div class="alert alert-success mt-2">Order <strong>@completeOrderId</strong> completed.</div>
+    }
+    else if (completeError is not null)
+    {
+        <div class="alert alert-danger mt-2">@completeError</div>
+    }
+</section>
+
+@code {
+    // Start Order state
+    bool startBusy;
+    string? startedOrderId;
+    string? startError;
+
+    // Complete Order state
+    bool completeBusy;
+    string? completeOrderId;
+    bool completeSuccess;
+    string? completeError;
+
+    async Task StartOrder()
+    {
+        startBusy = true;
+        startedOrderId = null;
+        startError = null;
+        try
+        {
+            startedOrderId = await OrderApi.StartOrderAsync();
+        }
+        catch (Exception ex)
+        {
+            startError = $"Failed to start order: {ex.Message}";
+        }
+        finally
+        {
+            startBusy = false;
+        }
+    }
+
+    async Task CompleteOrder()
+    {
+        completeBusy = true;
+        completeSuccess = false;
+        completeError = null;
+        try
+        {
+            await OrderApi.CompleteOrderAsync(completeOrderId!);
+            completeSuccess = true;
+        }
+        catch (Exception ex)
+        {
+            completeError = $"Failed to complete order: {ex.Message}";
+        }
+        finally
+        {
+            completeBusy = false;
+        }
+    }
+}
