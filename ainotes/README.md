@@ -23,6 +23,7 @@ https://www.wheresyoured.at/
 
 * https://substack.jurgenappelo.com/p/stop-chasing-ai-tools explorer vs settler
 * https://medium.com/feenk/rewilding-software-engineering-ca3ad1e612d8
+* https://www.artificialintelligencemadesimple.com/i/192498139/case-study-2-how-github-copilot-lost-to-cursor-which-is-being-now-being-beaten-by-claude-code "The coding market shows the same pattern in faster motion. Copilot fit the old workflow and won the first phase. Cursor changed the value from autocomplete to higher-level delegation. Claude Code changed it again from delegation to autonomous execution. Each shift changed what developers were actually paying for, and each made the previous leader’s strengths less decisive."
 
 * https://www.jamesshore.com/v2/blog/2026/you-need-ai-that-reduces-your-maintenance-costs
 * https://medium.com/thrivve-partners/ai-wont-fix-your-broken-delivery-system-here-s-what-will-75ec7a1b0475 cycle time
@@ -31,6 +32,8 @@ https://www.wheresyoured.at/
 * German: https://www.golem.de/news/gartner-wie-ki-das-c-level-management-entwertet-2603-207029.html Richtig spannend fand ich die Abwehrhaltung auf die Frage. Vor allem weil sie gleich auf die Kosten ausweichen. Auch lustig wie sie Dinge plötzlich negieren, die beim Ersatz von Devs angeführt werden.
 
 ## Critical Thinking (unsorted)
+
+* https://www.artificialintelligencemadesimple.com/p/anthropics-claude-mythos-launch-is misinformation and hype
 
 https://www.mindprison.cc/p/verifier-loops-made-ai-coding-useful-vibeware-abandonware-technical-debt-consequences (No humble opinions here: one of the best articles)
 * "Coding harnesses using a verifier-loop pattern are able to substantially increase the useful output of LLMs. This pattern is the only way to use LLMs to mitigate the hallucinations and lack of true reasoning."
@@ -53,8 +56,6 @@ More
 * https://blog.tyler.fun/3mix3facggk24?auth_completed=true Claude Code is a Conflict of Interest
 
 * https://kevlinhenney.medium.com/think-for-yourself-7d129aa959e3 Understand and improve on LLM-generated code
-
-* https://simonwillison.net/2026/May/24/armin-ronacher/ prefer real short writing over long-format AI content
 
 Criticism
 
@@ -87,6 +88,13 @@ Criticism
 * https://medium.com/mapai/on-the-question-of-debt-aca1125d4a62 delegating comprehension is a risk with LLMs
 * https://simonwillison.net/2026/Feb/15/the-ai-vampire/
 * https://chrisloy.dev/post/2025/09/28/the-ai-coding-trap
+
+Intentionally reducing AI usage
+
+* https://www.linkedin.com/posts/asgaut-mjolne_after-four-months-of-claude-first-we-decided-ugcPost-7466023945259921408-Zkwi/ "runter vom Gas" 
+* https://thoughts.hmmz.org/2026-05-31.html "On that last point, this technology is horrific for attention. It's a thermonuclear ADHD amplifier"
+* https://adamtornhill.substack.com/p/how-much-of-my-writing-is-ai-generated why writing & effort is important
+* https://simonwillison.net/2026/May/24/armin-ronacher/ prefer real short writing over long-format AI content
 
 ## Other OSS & AI
 
