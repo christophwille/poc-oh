@@ -28,6 +28,7 @@ Get yourself an account at https://openrouter.ai/ to test all models! (or if you
 * https://github.com/unsafePtr/ClaudeCodeRoslynLspProxy
 * https://github.com/diskodan/CSharperMcp
 * https://github.com/Aaronontheweb/dotnet-slopwatch
+* https://antondevtips.com/blog/how-to-build-production-ready-projects-with-claude-code
 
 ## Token Optimization
 

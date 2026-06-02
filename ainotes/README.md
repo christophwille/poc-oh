@@ -11,6 +11,7 @@ Critical reporting is far and few between, so go read:
 
 https://www.wheresyoured.at/
 
+* https://www.youtube.com/watch?v=K-Xv8D8NjTk&t=3138s How Anders uses AI + next sections (semantic search, vibe, futures)
 
 ## Guides
 
