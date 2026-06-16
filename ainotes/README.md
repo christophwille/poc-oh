@@ -11,7 +11,11 @@ Critical reporting is far and few between, so go read:
 
 https://www.wheresyoured.at/
 
+## Videos
+
 * https://www.youtube.com/watch?v=K-Xv8D8NjTk&t=3138s How Anders uses AI + next sections (semantic search, vibe, futures)
+* https://www.youtube.com/watch?v=RjfbvDXpFls Building pi in a World of Slop — Mario Zechner; see also https://newsletter.pragmaticengineer.com/p/building-pi-and-what-makes-self-modifying - Armin & Mario (watch video for more nuanced thinking of AI usage, what OSS really means to Mario)
+* https://www.youtube.com/watch?v=xHHlhoRC8W4 Measuring the impact of AI (Laura Tacho)
 
 ## Guides
 
@@ -22,6 +26,8 @@ https://www.wheresyoured.at/
 
 ## Generic
 
+* https://www.normaltech.ai/p/why-ai-hasnt-replaced-software-engineers
+* https://techcrunch.com/2026/05/27/tech-ceos-are-apparently-suffering-from-ai-psychosis/
 * https://substack.jurgenappelo.com/p/stop-chasing-ai-tools explorer vs settler
 * https://medium.com/feenk/rewilding-software-engineering-ca3ad1e612d8
 * https://www.artificialintelligencemadesimple.com/i/192498139/case-study-2-how-github-copilot-lost-to-cursor-which-is-being-now-being-beaten-by-claude-code "The coding market shows the same pattern in faster motion. Copilot fit the old workflow and won the first phase. Cursor changed the value from autocomplete to higher-level delegation. Claude Code changed it again from delegation to autonomous execution. Each shift changed what developers were actually paying for, and each made the previous leader’s strengths less decisive."
@@ -70,7 +76,6 @@ Criticism
 * https://nrehiew.github.io/blog/minimal_editing/ ties in with "Why CoPilot code reviews always finds something new"
 * https://devblogs.microsoft.com/dotnet/ten-months-with-cca-in-dotnet-runtime/ (=> need verifier loops)
 * https://martinfowler.com/fragments/2026-01-08.html Top AI uses bei Antrophic:  Most usage is for debugging and helping understand existing code, Notable increase in using it for implementing new features.
-* https://www.youtube.com/watch?v=xHHlhoRC8W4 Measuring the impact of AI (Laura Tacho)
 * https://www.theregister.com/software/2025/07/11/ai-coding-tools-make-developers-slower-study-finds/1143832 the METR study
 * https://martinfowler.com/articles/exploring-gen-ai/i-still-care-about-the-code.html
 * https://newsletter.pragmaticengineer.com/p/two-years-of-using-ai
@@ -99,6 +104,7 @@ Intentionally reducing AI usage
 
 ## Other OSS & AI
 
+* https://simonwillison.net/2026/Jun/5/andreas-kling "A substantial patch used to imply substantial effort, and that effort was a reasonable proxy for good faith. That assumption no longer holds. [...]"
 * https://simonwillison.net/2026/Apr/30/zig-anti-ai/ "Zig values contributors over their contributions."
 * https://github.com/torvalds/linux/blob/master/Documentation/process/coding-assistants.rst roughly translates to "use as much AI as you want, in the way you want, but in the end you need to be fully responsible for any code that you used AI for" (via Pragmatic Engineer)
 * https://petabridge.com/blog/ai-wont-kill-open-source/ AI is discovering and adopting open source libraries faster than humans ever could.
@@ -108,6 +114,7 @@ Intentionally reducing AI usage
 
 Of course all Ed Zitron articles.
 
+* https://newsletter.pragmaticengineer.com/i/201622200/2-new-trend-smart-model-routing
 * https://www.llm-prices.com/
 * https://newsletter.pragmaticengineer.com/p/the-pulse-token-spend-breaks-budgets token spending for various company sizes & alternatives
 * https://newsletter.pragmaticengineer.com/p/the-pulse-tokenmaxxing-as-a-weird deficiences of measuring token usage

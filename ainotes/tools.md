@@ -15,6 +15,7 @@ Get yourself an account at https://openrouter.ai/ to test all models! (or if you
 
 ## Claude Code
 
+* https://arps18.github.io/posts/claude-code-mastery/
 * https://simonwillison.net/2026/May/8/unreasonable-effectiveness-of-html
 * https://claude.com/blog/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start
 * https://www.builder.io/blog/claude-md-guide
@@ -22,6 +23,10 @@ Get yourself an account at https://openrouter.ai/ to test all models! (or if you
 ## Skills
 
 * https://github.com/Aaronontheweb/dotnet-skills
+
+## Adjacent Tools
+
+* https://www.agentsview.io/
 
 ## C# Specific
 
