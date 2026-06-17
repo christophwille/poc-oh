@@ -1,0 +1,1 @@
+podman load -i ./images/container-image.tar.gz
