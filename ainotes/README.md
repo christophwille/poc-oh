@@ -13,6 +13,7 @@ https://www.wheresyoured.at/
 
 ## Videos
 
+* https://youtu.be/5wks1W-auKY Slow down to speed up: AI and software engineering, Keynote craft 2026 Budapest. Article (paid) with write-up available at https://newsletter.pragmaticengineer.com/p/slow-down-to-speed-up
 * https://www.youtube.com/watch?v=K-Xv8D8NjTk&t=3138s How Anders uses AI + next sections (semantic search, vibe, futures)
 * https://www.youtube.com/watch?v=RjfbvDXpFls Building pi in a World of Slop — Mario Zechner; see also https://newsletter.pragmaticengineer.com/p/building-pi-and-what-makes-self-modifying - Armin & Mario (watch video for more nuanced thinking of AI usage, what OSS really means to Mario)
 * https://www.youtube.com/watch?v=xHHlhoRC8W4 Measuring the impact of AI (Laura Tacho)
