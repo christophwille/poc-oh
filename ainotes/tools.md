@@ -2,6 +2,7 @@
 
 In general I keep tabs on stuff via https://github.com/stars/christophwille/lists/ml-ai-dl
 
+* https://newsletter.pragmaticengineer.com/p/ai-impact-on-software-engineers-part-2 (free to 5) 1. AI tooling tradeoffs, 3. Impact on codebase quality, 7. Where are we headed?
 * https://www.chrismdp.com/coding-with-ai/ one of many
 
 ## Of Note
@@ -32,16 +33,22 @@ Get yourself an account at https://openrouter.ai/ to test all models! (or if you
 
 ## Adjacent Tools
 
+* https://codescene.io/ CodeScene MCP specifically
 * https://www.agentsview.io/
-* https://github.com/chopratejas/headroom#what-it-does
 
 ## C# Specific
 
+* https://github.com/atherio-danp/cde-dotnetcc/ some ideas, ege Serena MCP
+* https://github.com/Nimblesite/SharpLsp#why-this-exists
 * https://github.com/unsafePtr/ClaudeCodeRoslynLspProxy
 * https://github.com/diskodan/CSharperMcp
+* https://github.com/CodeAlta/CodeAlta
 * https://github.com/Aaronontheweb/dotnet-slopwatch
 * https://antondevtips.com/blog/how-to-build-production-ready-projects-with-claude-code
 
 ## Token Optimization
 
+* https://github.com/BerriAI/litellm/discussions/31816 (LiteLLM + Headroom), check out MeshLLM as well
+* https://github.com/chopratejas/headroom#what-it-does
+* https://github.com/rtk-ai/rtk CLI proxy that reduces LLM token consumption by 60-90%
 * https://github.com/olivomarco/github-copilot-token-optimization don't agree with all of those
