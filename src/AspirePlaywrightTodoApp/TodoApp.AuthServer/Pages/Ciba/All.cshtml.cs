@@ -1,0 +1,16 @@
+using Duende.IdentityServer.Models;
+using Duende.IdentityServer.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+
+namespace TodoApp.AuthServer.Pages.Ciba;
+
+[SecurityHeaders]
+[Authorize]
+public class AllModel(IBackchannelAuthenticationInteractionService backchannelAuthenticationInteractionService)
+    : PageModel
+{
+    public IEnumerable<BackchannelUserLoginRequest> Logins { get; set; } = default!;
+
+    public async Task OnGetAsync(CancellationToken ct) => Logins = await backchannelAuthenticationInteractionService.GetPendingLoginRequestsForCurrentUserAsync(ct);
+}

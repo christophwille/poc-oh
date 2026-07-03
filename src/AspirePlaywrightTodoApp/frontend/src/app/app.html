@@ -1,0 +1,16 @@
+<main>
+  <h1>Todo</h1>
+
+  @if (checking()) {
+    <p data-testid="auth-checking">Checking session…</p>
+  } @else if (authenticated()) {
+    <div class="user-row">
+      <span data-testid="user-name">{{ userName() }}</span>
+      <button data-testid="logout" type="button" (click)="logout()">Sign out</button>
+    </div>
+    <app-todo-list />
+  } @else {
+    <p>Sign in to manage your todos.</p>
+    <button data-testid="login" type="button" (click)="login()">Sign in</button>
+  }
+</main>

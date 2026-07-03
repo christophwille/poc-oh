@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+	<PropertyGroup>
+		<TargetFramework>net11.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>dotnet-TodoApp.MigrationService-9cac2a5f-f337-4375-a25d-dc2ff20e9ff8</UserSecretsId>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Aspire.Microsoft.EntityFrameworkCore.SqlServer" Version="13.4.6" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="11.0.0-preview.5.26302.115" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\TodoApp.Data\TodoApp.Data.csproj" />
+		<ProjectReference Include="..\TodoApp.ServiceDefaults\TodoApp.ServiceDefaults.csproj" />
+	</ItemGroup>
+</Project>

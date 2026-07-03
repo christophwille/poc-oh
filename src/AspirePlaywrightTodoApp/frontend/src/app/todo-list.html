@@ -1,0 +1,31 @@
+<div class="todo-container">
+  <form class="add-row" (submit)="$event.preventDefault(); add()">
+    <input
+      data-testid="new-todo-title"
+      type="text"
+      placeholder="What needs to be done?"
+      [value]="newTitle()"
+      (input)="newTitle.set($any($event.target).value)"
+    />
+    <button data-testid="add-todo" type="submit">Add</button>
+  </form>
+
+  <ul class="todo-list">
+    @for (todo of todos(); track todo.id) {
+      <li data-testid="todo-item" [class.done]="todo.isDone">
+        <label>
+          <input
+            data-testid="toggle-todo"
+            type="checkbox"
+            [checked]="todo.isDone"
+            (change)="toggle(todo)"
+          />
+          <span class="title">{{ todo.title }}</span>
+        </label>
+        <button data-testid="delete-todo" type="button" (click)="remove(todo)">✕</button>
+      </li>
+    } @empty {
+      <li class="empty" data-testid="empty-list">Nothing to do yet.</li>
+    }
+  </ul>
+</div>
