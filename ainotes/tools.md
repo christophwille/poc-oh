@@ -24,6 +24,7 @@ Get yourself an account at https://openrouter.ai/ to test all models! (or if you
 * https://simonwillison.net/2026/May/8/unreasonable-effectiveness-of-html
 * https://claude.com/blog/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start
 * https://www.builder.io/blog/claude-md-guide
+* https://github.com/NikiforovAll/claude-code-cost
 
 ## Skills / Commands
 
@@ -39,6 +40,7 @@ Get yourself an account at https://openrouter.ai/ to test all models! (or if you
 ## C# Specific
 
 * https://github.com/atherio-danp/cde-dotnetcc/ some ideas, ege Serena MCP
+* https://github.com/wagnerhsu/skills-dotnet-claude-kit/tree/main
 * https://github.com/Nimblesite/SharpLsp#why-this-exists
 * https://github.com/unsafePtr/ClaudeCodeRoslynLspProxy
 * https://github.com/diskodan/CSharperMcp
