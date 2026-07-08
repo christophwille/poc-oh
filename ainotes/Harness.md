@@ -24,3 +24,6 @@ More
 * https://devblogs.microsoft.com/blog/how-ai-coding-agents-actually-use-your-technology
 * https://soverius.ai/blog/what-is-a-harness
 
+## Local AI
+
+* https://martinfowler.com/articles/exploring-gen-ai/local-models-for-coding-factors.html

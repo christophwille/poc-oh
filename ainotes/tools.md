@@ -7,7 +7,6 @@ In general I keep tabs on stuff via https://github.com/stars/christophwille/list
 
 ## Of Note
 
-* https://pi.dev/
 * https://github.com/tiennm99/awesome-coding-agents Curated ranking of AI agent coding tools, sorted by GitHub stars. Updated daily by GitHub Actions.
 * https://github.com/aaif-goose/goose (Roadmaps: https://github.com/aaif-goose/goose/discussions/categories/roadmaps)
 
@@ -16,6 +15,12 @@ Get yourself an account at https://openrouter.ai/ to test all models! (or if you
 ## OpenCode
 
 * https://newsletter.pragmaticengineer.com/p/opencode bullet #8, #10, #13 old school patterns. Taste & quality section: "shows up in other ways... if you start to be lazy in one place, you start to become lazy everywhere". Video at https://www.youtube.com/watch?v=1VqKUrxR2C8&t=973s
+
+## Pi
+
+* https://pi.dev/
+* https://www.youtube.com/watch?v=Dli5slNaJu0 AT I Hated Every Coding Agent, So I Built My Own — Mario Zechner (Pi) => comparison, OpenCode deliberations, pi packages
+* https://www.youtube.com/watch?v=f8cfH5XX-XU&t=501s PI customization
 
 ## Claude Code
 
