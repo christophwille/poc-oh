@@ -77,6 +77,7 @@ Criticism
 
 ## Experience Reports (and related)
 
+* https://bun.com/blog/bun-in-rust#claude-rewrite-bun-in-rust grain of salt, obviously (vendor)
 * https://testpappy.wordpress.com/2026/04/20/the-tech-radar-is-blinking-red/
 * https://nrehiew.github.io/blog/minimal_editing/ ties in with "Why CoPilot code reviews always finds something new"
 * https://devblogs.microsoft.com/dotnet/ten-months-with-cca-in-dotnet-runtime/ (=> need verifier loops)
@@ -109,6 +110,7 @@ Intentionally reducing AI usage
 
 ## Other OSS & AI
 
+* https://simonwillison.net/2026/Jul/8/kenton-varda/#atom-everything that is why we (ILSpy) wrote instructions in CLAUDE.md and added a mention in our CONTRIBUTING.md on providing a tl;dr
 * https://simonwillison.net/2026/Jun/5/andreas-kling "A substantial patch used to imply substantial effort, and that effort was a reasonable proxy for good faith. That assumption no longer holds. [...]"
 * https://simonwillison.net/2026/Apr/30/zig-anti-ai/ "Zig values contributors over their contributions."
 * https://github.com/torvalds/linux/blob/master/Documentation/process/coding-assistants.rst roughly translates to "use as much AI as you want, in the way you want, but in the end you need to be fully responsible for any code that you used AI for" (via Pragmatic Engineer)

@@ -10,7 +10,11 @@ In general I keep tabs on stuff via https://github.com/stars/christophwille/list
 * https://github.com/tiennm99/awesome-coding-agents Curated ranking of AI agent coding tools, sorted by GitHub stars. Updated daily by GitHub Actions.
 * https://github.com/aaif-goose/goose (Roadmaps: https://github.com/aaif-goose/goose/discussions/categories/roadmaps)
 
-Get yourself an account at https://openrouter.ai/ to test all models! (or if you are really, really concerned maybe look at https://www.heise.de/news/Souveraene-KI-aus-Deutschland-11282692.html)
+## Routers
+
+* https://openrouter.ai/
+* https://cortecs.ai/ "Europe's LLM router for cost, speed, and compliance"
+* Germany https://www.heise.de/news/Souveraene-KI-aus-Deutschland-11282692.html
 
 ## OpenCode
 
@@ -40,6 +44,7 @@ Get yourself an account at https://openrouter.ai/ to test all models! (or if you
 ## Adjacent Tools
 
 * https://codescene.io/ CodeScene MCP specifically
+* https://github.com/Egonex-AI/Understand-Anything and https://github.com/Graphify-Labs/graphify
 * https://www.agentsview.io/
 
 ## C# Specific
