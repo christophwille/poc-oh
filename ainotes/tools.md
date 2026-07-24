@@ -2,6 +2,7 @@
 
 In general I keep tabs on stuff via https://github.com/stars/christophwille/lists/ml-ai-dl
 
+* https://addyosmani.com/blog/new-sdlc-vibe-coding/ "Verification is the line between vibe coding and engineering"
 * https://newsletter.pragmaticengineer.com/p/ai-impact-on-software-engineers-part-2 (free to 5) 1. AI tooling tradeoffs, 3. Impact on codebase quality, 7. Where are we headed?
 * https://www.chrismdp.com/coding-with-ai/ one of many
 
@@ -57,6 +58,10 @@ In general I keep tabs on stuff via https://github.com/stars/christophwille/list
 * https://github.com/CodeAlta/CodeAlta
 * https://github.com/Aaronontheweb/dotnet-slopwatch
 * https://antondevtips.com/blog/how-to-build-production-ready-projects-with-claude-code
+
+Related
+
+* https://github.com/taswar/PromptEngineeringForDotNetDevelopers
 
 ## Token Optimization
 

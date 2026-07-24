@@ -26,10 +26,12 @@ https://www.wheresyoured.at/
 
 ## Human Interactions
 
+* https://ckarchive.com/b/zlughnhkl759zi7qrr9qehw2zoq5qc6hlow9p Thinking Fast, Slow, and Artificial: Understanding Cognitive Surrender
 * https://www.oreilly.com/radar/guidelines-for-respectful-use-of-ai/
 * https://www.youtube.com/watch?v=3NSSGt9bZag Linus: "I don't use AI to work with people"
 
 ## Generic
+
 * https://newsletter.pragmaticengineer.com/p/tech-interviews-with-neetcode two bullet points stand out: 6 Neet finds AI most valuable as a tech debt and refactoring assistant. He’s using AI to clean up years’ worth of low-quality code on NeetCode’s backend, which also validates the decision to take shortcuts in the knowledge they can be corrected later. 7 ‘Effort’ is becoming the differentiator as AI makes everything else cheap. Neet says how you can prompt almost anything, but the capacity to be engaged with and care about your work, and to defend decisions you make, cannot be prompted by an AI tool. These depend on personal qualities like effort and dedication.
 * https://www.normaltech.ai/p/why-ai-hasnt-replaced-software-engineers
 * https://techcrunch.com/2026/05/27/tech-ceos-are-apparently-suffering-from-ai-psychosis/
@@ -45,6 +47,10 @@ https://www.wheresyoured.at/
 
 ## Critical Thinking (unsorted)
 
+* https://martinfowler.com/fragments/2026-07-21.html board-vs-engineer divide, stench of LLM-speak
+
+* https://simonwillison.net/2026/Jul/19/ai-mania/#atom-everything critical thinking no longer exists
+
 * https://www.artificialintelligencemadesimple.com/p/anthropics-claude-mythos-launch-is misinformation and hype
 
 https://www.mindprison.cc/p/verifier-loops-made-ai-coding-useful-vibeware-abandonware-technical-debt-consequences (No humble opinions here: one of the best articles)
@@ -56,6 +62,7 @@ https://www.mindprison.cc/p/verifier-loops-made-ai-coding-useful-vibeware-abando
 
 More
 
+* https://www.jsnover.com/blog/2026/07/20/llm-models-are-bullshit-engines/
 * https://www.blundergoat.com/articles/ai-makes-the-easy-part-easier-and-the-hard-part-harder "Writing code is the easy part of the job. It always has been. The hard part is investigation, understanding context, validating assumptions, and knowing why a particular approach is the right one for this situation."
 * https://www.architecture-weekly.com/p/vibing-harness-and-ooda-loop "... the Internet is full of such people. They shout about what they did with Claude or how much progress LLM tools have made. Some even predict the end of coding. I already wrote that this is wrong perspective."
 * https://brodzinski.com/2025/10/no-trust-autonomous-ai-agents.html transparency, alignment
@@ -110,6 +117,7 @@ Intentionally reducing AI usage
 
 ## Other OSS & AI
 
+* https://simonwillison.net/2026/Jul/14/armin-ronacher/#atom-everything "... it was the process by which your understanding became mine, and by which both of us discovered whether we still agreed about how the system worked. This friction synchronizes people."
 * https://simonwillison.net/2026/Jul/8/kenton-varda/#atom-everything that is why we (ILSpy) wrote instructions in CLAUDE.md and added a mention in our CONTRIBUTING.md on providing a tl;dr
 * https://simonwillison.net/2026/Jun/5/andreas-kling "A substantial patch used to imply substantial effort, and that effort was a reasonable proxy for good faith. That assumption no longer holds. [...]"
 * https://simonwillison.net/2026/Apr/30/zig-anti-ai/ "Zig values contributors over their contributions."
@@ -133,3 +141,4 @@ Of course all Ed Zitron articles.
 There has to be some fun in the whole thing ;-)
 
 * https://www.youtube.com/watch?v=GgmaFPR17qY God is our Copilot
+* https://overpaid.lol/
