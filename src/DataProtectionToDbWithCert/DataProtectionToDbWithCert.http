@@ -1,0 +1,6 @@
+@DataProtectionToDbWithCert_HostAddress = http://localhost:5222
+
+GET {{DataProtectionToDbWithCert_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
