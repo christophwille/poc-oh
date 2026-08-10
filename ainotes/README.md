@@ -29,9 +29,12 @@ https://www.wheresyoured.at/
 * https://ckarchive.com/b/zlughnhkl759zi7qrr9qehw2zoq5qc6hlow9p Thinking Fast, Slow, and Artificial: Understanding Cognitive Surrender
 * https://www.oreilly.com/radar/guidelines-for-respectful-use-of-ai/
 * https://www.youtube.com/watch?v=3NSSGt9bZag Linus: "I don't use AI to work with people"
+* https://simonwillison.net/2026/Aug/3/dont-be-a-meat-proxy/#atom-everything "By all means, prompt AI. But don't just relay the output. Read it, understand it, validate it, and then write a response in your own words (a decent certificate that you've done the prior steps). Making that effort is value you can add."
 
 ## Generic
 
+* https://newsletter.getdx.com/p/the-state-of-ai-impact-in-engineering Data from 500+ teams reveals that AI is delivering measurable velocity gains, but velocity alone isn't the story.
+* https://newsletter.getdx.com/p/five-studies-that-are-changing-how AI compressed the upstream work. What does that mean for everything downstream?
 * https://newsletter.pragmaticengineer.com/p/tech-interviews-with-neetcode two bullet points stand out: 6 Neet finds AI most valuable as a tech debt and refactoring assistant. He’s using AI to clean up years’ worth of low-quality code on NeetCode’s backend, which also validates the decision to take shortcuts in the knowledge they can be corrected later. 7 ‘Effort’ is becoming the differentiator as AI makes everything else cheap. Neet says how you can prompt almost anything, but the capacity to be engaged with and care about your work, and to defend decisions you make, cannot be prompted by an AI tool. These depend on personal qualities like effort and dedication.
 * https://www.normaltech.ai/p/why-ai-hasnt-replaced-software-engineers
 * https://techcrunch.com/2026/05/27/tech-ceos-are-apparently-suffering-from-ai-psychosis/

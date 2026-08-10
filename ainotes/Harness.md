@@ -20,6 +20,7 @@ Stage 4+ of  https://dev.to/tacoda/the-agent-harness-turning-ai-slop-into-shippi
 
 More
 
+* https://semgrep.dev/blog/2026/comparing-open-source-ai-code-security-harnesses/
 * https://www.pulumi.com/blog/stop-tuning-prompts-build-a-harness/
 * https://devblogs.microsoft.com/blog/how-ai-coding-agents-actually-use-your-technology
 * https://soverius.ai/blog/what-is-a-harness

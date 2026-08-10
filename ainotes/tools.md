@@ -39,8 +39,12 @@ In general I keep tabs on stuff via https://github.com/stars/christophwille/list
 ## Skills / Commands
 
 * https://github.com/DietrichGebert/ponytail#commands
-* https://github.com/Aaronontheweb/dotnet-skills
+* https://github.com/Aaronontheweb/dotnet-skills (regularly updated, eg https://github.com/Aaronontheweb/dotnet-skills/releases/tag/v1.5.0)
 * https://github.com/dotnet/skills/
+* https://github.com/wieslawsoltes/Performance-Skill
+
+* https://www.skills.sh/
+* https://library-skills.io
 
 ## Adjacent Tools
 
