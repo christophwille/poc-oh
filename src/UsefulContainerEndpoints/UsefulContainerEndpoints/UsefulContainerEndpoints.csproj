@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <!-- dotnet publish -t:PublishContainer: the base image only sets ASPNETCORE_HTTP_PORTS=8080; add the management listener. -->
+  <ItemGroup>
+    <ContainerEnvironmentVariable Include="ASPNETCORE_HTTP_PORTS" Value="8080;8081" />
+    <ContainerPort Include="8081" Type="tcp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.11" />
+    <!-- ApplicationLifecycle + Manual health checks -->
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.Common" Version="10.9.0" />
+    <!-- CPU/memory vs. container limits (cgroup-aware); Windows/Linux only, see Program.cs -->
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.ResourceUtilization" Version="10.9.0" />
+    <!-- Metrics -> Prometheus scrape endpoint. The Prometheus exporter has no GA release (beta since 2022); OTLP push is the GA path. -->
+    <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.17.0" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.17.0" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.Runtime" Version="1.17.0" />
+    <PackageReference Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" Version="1.17.0-beta.1" />
+  </ItemGroup>
+
+</Project>

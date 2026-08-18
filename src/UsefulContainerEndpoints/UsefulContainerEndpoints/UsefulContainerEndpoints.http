@@ -1,0 +1,24 @@
+@app = http://localhost:8080
+@mgmt = http://localhost:8081
+
+### the application (port 8080)
+GET {{app}}/weatherforecast
+Accept: application/json
+
+### liveness - no checks, 200 as long as Kestrel answers
+GET {{mgmt}}/healthz/live
+
+### readiness - ApplicationLifecycle + ResourceUtilization; 503 while shutting down
+GET {{mgmt}}/healthz/ready
+
+### startup - 503 for the first ~10s (WarmupService, Warmup:DelaySeconds), then 200
+GET {{mgmt}}/healthz/startup
+
+### Prometheus scrape endpoint
+GET {{mgmt}}/metrics
+
+### build / pod identity
+GET {{mgmt}}/info
+
+### management endpoints are NOT reachable on the app port -> 404
+GET {{app}}/healthz/live

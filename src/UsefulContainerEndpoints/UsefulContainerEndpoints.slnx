@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/docs/">
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="UsefulContainerEndpoints.IntegrationTests/UsefulContainerEndpoints.IntegrationTests.csproj" />
+  <Project Path="UsefulContainerEndpoints/UsefulContainerEndpoints.csproj" />
+</Solution>
