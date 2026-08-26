@@ -1,11 +1,10 @@
 // Initially created via https://aspire.dev/get-started/first-app/?lang=csharp
 
 using Aspire.Hosting;
-using Aspire.Hosting.RustFs;
 
 var builder = DistributedApplication.CreateBuilder(args);
 
-// https://github.com/konnta0/Aspire.Extensions/blob/main/src/Aspire.Hosting.RustFs/README.md
+// https://github.com/CommunityToolkit/Aspire/blob/main/src/CommunityToolkit.Aspire.Hosting.RustFs/README.md
 var rustfs = builder.AddRustFs("rustfs",
      accessKey: builder.AddParameter("rustfs-access-key", () => "rustfs-access-key"),
      secretKey: builder.AddParameter("rustfs-secret-key", () => "rustfs-secret-key"))
