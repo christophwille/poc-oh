@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SampleCoreWcfNet10/SampleCoreWcfNet10.csproj" />
+  <Project Path="SampleCoreWcfNet10.Tests/SampleCoreWcfNet10.Tests.csproj" />
+</Solution>

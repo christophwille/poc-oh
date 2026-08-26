@@ -50,6 +50,8 @@ https://www.wheresyoured.at/
 
 ## Critical Thinking (unsorted)
 
+* https://martinfowler.com/articles/exploring-gen-ai/tdd-in-the-agent-loop.html
+
 * https://martinfowler.com/fragments/2026-07-21.html board-vs-engineer divide, stench of LLM-speak
 
 * https://simonwillison.net/2026/Jul/19/ai-mania/#atom-everything critical thinking no longer exists
@@ -104,6 +106,7 @@ Criticism
 
 ## Cognitive Debt / Handing over too much control
 
+* https://sophiebits.com/2026/06/25/there-are-no-lossless-transformations-of-natural-language-text You must stand behind every idea and every sentence in your docs, Writing is thinking, More time should be spent authoring a document than consuming it, Longer is not better.
 * https://adamtornhill.substack.com/p/compressed-cognition-the-hidden-cost
 * https://adamtornhill.substack.com/p/coding-is-dead-but-it-still-smells "Maintaining a constant focus is draining, and I find that I can usually only sustain that intense high pace for a couple of hours before needing a break. (Thankfully, I can let a long-running agent make progress while I sip coffee)." 
 * https://simonwillison.net/2026/Feb/15/cognitive-debt/ AI cognitive debt vs tech debt

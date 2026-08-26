@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "SampleCoreWcfNet10": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:55917;http://localhost:55918"
+    }
+  }
+}

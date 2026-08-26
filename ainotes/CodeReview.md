@@ -1,5 +1,7 @@
 # Code Review
 
+* https://adamtornhill.substack.com/p/controlling-the-uncertainty-machine
+
 * https://newsletter.getdx.com/p/what-are-code-reviews-even-for "Habits that make code review effective in the first place: Small, well-explained changes. Protected reviewer time. Automated routine checks so humans can focus on judgment."
 
 * https://newsletter.pragmaticengineer.com/i/207312800/2-new-trend-concern-about-massive-increase-in-code-review-load "There’s been a boom in AI code review tools to deal with the increase in load since February, and an explosion of experimentation with and adoption of dedicated AI code review tools like CodeRabbit, Greptile, Qodo, SonarQube (now also Gitar). There’s also tools offered by coding harnesses themselves like Claude Code review, Cursor review, GitHub Copilot review. And then tools previously not involved in code reviews – but which have context on the codebase – are also adding this, like Sentry’s Seer AI reviews, Linear code reviews." and https://blog.cloudflare.com/ai-code-review/ + https://craft.faire.com/agent-fairey-agentic-development-with-custom-mcp-servers-71784c9bc5bd + https://product.hubspot.com/blog/automated-code-review-the-6-month-evolution
