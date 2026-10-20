@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QuartzNetAspire.ServiceDefaults\QuartzNetAspire.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\QuartzNetAspire.Contracts\QuartzNetAspire.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Quartz" Version="4.6.0" />
+    <PackageReference Include="Quartz.Aspire" Version="4.6.0" />
+    <PackageReference Include="Quartz.Dashboard.Agent" Version="4.6.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.1" />
+  </ItemGroup>
+
+</Project>

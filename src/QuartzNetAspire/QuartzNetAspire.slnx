@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="QuartzNetAspire.AppHost/QuartzNetAspire.AppHost.csproj" />
+  <Project Path="QuartzNetAspire.ServiceDefaults/QuartzNetAspire.ServiceDefaults.csproj" />
+  <Project Path="QuartzNetAspire.Contracts/QuartzNetAspire.Contracts.csproj" />
+  <Project Path="QuartzNetAspire.Dashboard/QuartzNetAspire.Dashboard.csproj" />
+  <Project Path="QuartzNetAspire.ScheduledWorker/QuartzNetAspire.ScheduledWorker.csproj" />
+  <Project Path="QuartzNetAspire.QueueWorker/QuartzNetAspire.QueueWorker.csproj" />
+</Solution>
