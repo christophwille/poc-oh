@@ -89,6 +89,7 @@ Criticism
 
 ## Experience Reports (and related)
 
+* https://terriblesoftware.org/2026/09/10/ai-is-breaking-this-thing-we-call-trust/#:~:text=And%20that,me%3F%E2%80%9D
 * https://bun.com/blog/bun-in-rust#claude-rewrite-bun-in-rust grain of salt, obviously (vendor)
 * https://testpappy.wordpress.com/2026/04/20/the-tech-radar-is-blinking-red/
 * https://nrehiew.github.io/blog/minimal_editing/ ties in with "Why CoPilot code reviews always finds something new"

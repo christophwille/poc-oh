@@ -42,6 +42,8 @@ In general I keep tabs on stuff via https://github.com/stars/christophwille/list
 * https://github.com/Aaronontheweb/dotnet-skills (regularly updated, eg https://github.com/Aaronontheweb/dotnet-skills/releases/tag/v1.5.0)
 * https://github.com/dotnet/skills/
 * https://github.com/wieslawsoltes/Performance-Skill
+* https://github.com/mattpocock/skills
+* https://github.com/willtsai/agentic-skills
 
 * https://www.skills.sh/
 * https://library-skills.io
@@ -66,6 +68,13 @@ In general I keep tabs on stuff via https://github.com/stars/christophwille/list
 Related
 
 * https://github.com/taswar/PromptEngineeringForDotNetDevelopers
+
+# Angular
+
+* https://evilmartians.com/chronicles/ten-anti-ai-slop-moves-for-frontend-projects-going-faster-than-humans-can-review
+* https://github.com/angular/skills
+* https://github.com/L-X-T/ng-agentic-skills/ with article series, esp https://www.angulararchitects.io/blog/ae-skills-for-angular/
+* https://github.com/ChromeDevTools/chrome-devtools-mcp
 
 ## Token Optimization
 

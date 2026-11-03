@@ -50,12 +50,12 @@ graph LR
 
 | Project | Role | Key packages |
 |---|---|---|
-| `QuartzNetAspire.AppHost` | SQL Server + database, RabbitMQ (admin/admin, management plugin), `dashboard-agent-token` parameter, three projects | `Aspire.Hosting.SqlServer`, `Aspire.Hosting.RabbitMQ` 13.6.1 |
-| `QuartzNetAspire.ServiceDefaults` | Aspire template; adds `AddSource("RabbitMQ.Client.*")` for publish/deliver spans | OpenTelemetry 1.18 |
+| `QuartzNetAspire.AppHost` | SQL Server + database, RabbitMQ (admin/admin, management plugin), `dashboard-agent-token` parameter, three projects | `Aspire.Hosting.SqlServer`, `Aspire.Hosting.RabbitMQ` 13.6.4 |
+| `QuartzNetAspire.ServiceDefaults` | Aspire template; adds `AddSource("RabbitMQ.Client.*")` for publish/deliver spans | OpenTelemetry 1.20.1 |
 | `QuartzNetAspire.Contracts` | `OrderPlaced` record; `EasyNetQConnection.FromAmqpUri` (Aspire hands out `amqp://user:pass@host:port`, EasyNetQ wants key=value or a `ConnectionConfiguration`) | `EasyNetQ` 8.1.11 |
-| `QuartzNetAspire.ScheduledWorker` | `AddQuartzPersistentStore("quartz-scheduled", Clustered)` + `UseExecutionHistory()` + `AddJobLogScope()` + `UseDashboardAgent`; cron and simple triggers; durable `outbox-relay` with a `StartNow` trigger | `Quartz`, `Quartz.Aspire`, `Quartz.Dashboard.Agent` 4.6.0, `Microsoft.Data.SqlClient` 7.1.1 |
-| `QuartzNetAspire.QueueWorker` | `UseInMemoryStore()` + `UseDashboardAgent`; durable `order-listener` with a `StartNow` trigger; `AddSource/AddMeter("Quartz")` by hand (no `Quartz.Aspire`) | `Quartz`, `Quartz.Dashboard.Agent` 4.6.0 |
-| `QuartzNetAspire.Dashboard` | `AddQuartzDashboard(AttachStore("team-a") + AcceptAgents(token))`, `AddQuartzHttpApi("/quartz-api")`, `MapStaticAssets()`, `RequiresAspNetWebAssets` | `Quartz.Dashboard` 4.6.0 (brings `Quartz.AspNetCore`), `Microsoft.Data.SqlClient` |
+| `QuartzNetAspire.ScheduledWorker` | `AddQuartzPersistentStore("quartz-scheduled", Clustered)` + `UseExecutionHistory()` + `AddJobLogScope()` + `UseDashboardAgent`; cron and simple triggers; durable `outbox-relay` with a `StartNow` trigger | `Quartz`, `Quartz.Aspire`, `Quartz.Dashboard.Agent` 4.7.1, `Microsoft.Data.SqlClient` 7.1.1 |
+| `QuartzNetAspire.QueueWorker` | `UseInMemoryStore()` + `UseDashboardAgent`; durable `order-listener` with a `StartNow` trigger; `AddSource/AddMeter("Quartz")` by hand (no `Quartz.Aspire`) | `Quartz`, `Quartz.Dashboard.Agent` 4.7.1 |
+| `QuartzNetAspire.Dashboard` | `AddQuartzDashboard(AttachStore("team-a") + AcceptAgents(token))`, `AddQuartzHttpApi("/quartz-api")`, `MapStaticAssets()`, `RequiresAspNetWebAssets` | `Quartz.Dashboard` 4.7.1 (brings `Quartz.AspNetCore`), `Microsoft.Data.SqlClient` |
 
 ### Dashboard connectivity modes compared
 
@@ -93,7 +93,7 @@ What was tried and rejected: `RequestRecovery()` on the relay. After a *hard* ki
 ## Notable environment facts
 
 - Windows 11, .NET SDK 10.0.402 (an 11.0 RC is also installed, pinned away with `global.json`), Aspire CLI 13.6.1, **Podman** 6.1 (no Docker; Aspire auto-detects it).
-- Packages (2026-10-20): Quartz / Quartz.Aspire / Quartz.Dashboard / Quartz.Dashboard.Agent 4.6.0, EasyNetQ 8.1.11, Aspire.Hosting.* 13.6.1, Microsoft.Data.SqlClient 7.1.1.
+- Packages (2026-11-03): Quartz / Quartz.Aspire / Quartz.Dashboard / Quartz.Dashboard.Agent 4.7.1 (built on 4.6.0 on 2026-10-20; 4.7 needed no code change), EasyNetQ 8.1.11, Aspire.Hosting.* 13.6.4, OpenTelemetry 1.20.1, Microsoft.Data.SqlClient 7.1.1.
 - `aspire resource <name> stop` terminates a project process without a graceful shutdown on Windows; that is what produced the recovery triggers and the misfire rows described above.
 
 ## Implementation plan (as executed)
@@ -118,5 +118,6 @@ What was tried and rejected: `RequestRecovery()` on the relay. After a *hard* ki
 | Blazor dashboard would 404 on `/_framework/blazor.web.js` | Host has no `.razor` files of its own | `<RequiresAspNetWebAssets>true</RequiresAspNetWebAssets>` + `MapStaticAssets()` (from the docs, applied up front) |
 | A stray `QuartzScheduler (not created)` in the picker | `builder.Services.AddQuartz()` in the dashboard host (copied from the docs sample) | Removed; `AddQuartzDashboard` needs no scheduler of its own, the window is added at runtime |
 | EasyNetQ could not parse Aspire's connection string | Aspire injects `amqp://admin:…@localhost:port`; EasyNetQ expects `host=…;username=…` | `EasyNetQConnection.FromAmqpUri` → `ConnectionConfiguration` |
-| `curl …/schedulers/team-b-queue/jobs` → 404 | The HTTP API does not address agent targets in 4.6 | By design; agent schedulers are UI-only (or run the HTTP API in the worker) |
+| `curl …/schedulers/team-b-queue/jobs` → 404 | The HTTP API does not address agent targets (4.6, re-verified on 4.7.1) | By design; agent schedulers are UI-only (or run the HTTP API in the worker) |
+| Worker refused to start after the Quartz 4.6 → 4.7.1 bump against the persistent SQL container | 4.7 adds the mandatory `QRTZ_TRIGGERS.FIXED_DELAY` column; `CreateIfMissing` creates tables but never alters one, and the container kept the 4.6 schema | `podman rm` the SQL container and let the next start provision a fresh schema (or run `database/migrations/4.7/add_trigger_fixed_delay_sqlServer.sql` from the quartznet repo; the scripts are not in the NuGet package) |
 | `{Amount:C}` logged `¤294.00` | Invariant culture in the worker | Log the raw decimal |

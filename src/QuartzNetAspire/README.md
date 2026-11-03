@@ -35,6 +35,8 @@ aspire run
 
 or `dotnet run --project QuartzNetAspire.AppHost --launch-profile http`. The first start pulls the SQL Server and RabbitMQ images (a few minutes). Both containers use `ContainerLifetime.Persistent`, so later starts are fast and the Quartz tables survive restarts.
 
+That persistence has one catch: Quartz's `SchemaProvisioning.CreateIfMissing` only creates missing tables, it never alters one. When a Quartz release adds a column (4.7 added the mandatory `QRTZ_TRIGGERS.FIXED_DELAY`), the worker refuses to start against the old schema and names the script. Either run `database/migrations/<version>/*_sqlServer.sql` from the [quartznet repo](https://github.com/quartznet/quartznet/tree/main/database/migrations) against `quartz-scheduled`, or, for this demo, `podman rm <sql-container>` and let the next start provision a fresh schema (history rows are lost).
+
 Open the Aspire dashboard URL printed to the console. Wait until all five resources are **Running**; `quartz-dashboard` has an external endpoint.
 
 ## Demo walkthrough
@@ -85,9 +87,10 @@ curl "$d/quartz-api/schedulers/team-a-scheduled/jobs"
 curl "$d/quartz-api/schedulers/team-a-scheduled/triggers"
 curl "$d/quartz-api/schedulers/team-a-scheduled/jobs/fire-instances"   # currently executing
 curl "$d/quartz-api/schedulers/team-a-scheduled/nodes"                 # cluster check-ins
+curl "$d/quartz-api/schedulers/team-a-scheduled/triggers/DEFAULT/nightly-report/fire-times"   # next 10 fire times (new in 4.7)
 ```
 
-The bare scheduler name resolves to the window. Agent targets are not addressable through the HTTP API in 4.6 (`team-b-queue` returns 404 and names the target that holds it).
+The bare scheduler name resolves to the window. Agent targets are not addressable through the HTTP API, still true in 4.7.1 (`team-b-queue` returns 404 and names the target that holds it).
 
 ### 6. OpenTelemetry in the Aspire dashboard
 

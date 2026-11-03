@@ -1,5 +1,7 @@
 # Code Review
 
+* https://rdel.substack.com/p/rdel-165-can-ai-review-agents-take
+
 * https://adamtornhill.substack.com/p/controlling-the-uncertainty-machine
 
 * https://newsletter.getdx.com/p/what-are-code-reviews-even-for "Habits that make code review effective in the first place: Small, well-explained changes. Protected reviewer time. Automated routine checks so humans can focus on judgment."
