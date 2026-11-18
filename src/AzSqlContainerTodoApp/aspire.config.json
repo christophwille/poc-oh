@@ -1,0 +1,3 @@
+{
+  "appHost": { "path": "AzSqlContainerTodoApp.AppHost/AzSqlContainerTodoApp.AppHost.csproj" }
+}

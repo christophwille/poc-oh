@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="AzSqlContainerTodoApp.Api/AzSqlContainerTodoApp.Api.csproj" />
+  <Project Path="AzSqlContainerTodoApp.AppHost/AzSqlContainerTodoApp.AppHost.csproj" />
+  <Project Path="AzSqlContainerTodoApp.IntegrationTests/AzSqlContainerTodoApp.IntegrationTests.csproj" />
+  <Project Path="AzSqlContainerTodoApp.ServiceDefaults/AzSqlContainerTodoApp.ServiceDefaults.csproj" />
+</Solution>
